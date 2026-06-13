@@ -1,0 +1,212 @@
+/* Google Font fallback for Helvetica Neue */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* CSS Variables - Sage Green Palette */
+:root {
+    --sage-50: #f5f7f4;
+    --sage-100: #e8ede8;
+    --sage-200: #d1dbd1;
+    --sage-300: #b8c7b8;
+    --sage-400: #9fb39f;
+    --sage-500: #87a087;
+    --sage-600: #6f876f;
+    --sage-700: #576f57;
+    --sage-800: #405740;
+    --sage-900: #284028;
+    
+    --accent-pink: #f4c2c2;
+    --accent-peach: #ffdac1;
+    --text-dark: #2d2d2d;
+    --text-light: #5a5a5a;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--sage-50);
+    color: var(--text-dark);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--sage-200);
+    box-shadow: 0 4px 15px rgba(135, 160, 135, 0.2);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--sage-800);
+}
+
+.highlight {
+    color: var(--sage-600);
+    font-weight: 600;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+/* Card Style */
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px rgba(135, 160, 135, 0.1);
+    border: 1px solid var(--sage-100);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(135, 160, 135, 0.15);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: var(--sage-700);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.card p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.project-item {
+    background: var(--sage-50);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid var(--sage-100);
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    background: var(--sage-100);
+    transform: translateY(-3px);
+}
+
+.project-item h3 {
+    color: var(--sage-700);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.project-item p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--sage-500);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--sage-600);
+    transform: scale(1.05);
+}
+
+.social-btn {
+    display: inline-block;
+    background: var(--sage-100);
+    color: var(--sage-700);
+    padding: 0.6rem 1.3rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background: var(--sage-300);
+    color: var(--sage-900);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Cute Decorative Elements */
+.card::before {
+    content: '🌿';
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    font-size: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+}
